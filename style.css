@@ -12,13 +12,14 @@ body {
 .image-card {
   position: relative;
   place-self: center;
-  width: 100vwpx;
+  width: 100vw;
   display: grid;
   grid-template-columns: 25vw 25vw 25vw;
   gap: 50px;
   justify-content: center;
   align-items: center;
   padding-top: 80px;
+  padding-bottom: 600px;
 }
 
 .base-image {
@@ -115,25 +116,20 @@ body {
 
 .header {
   display: flex;
-  height: 200px;
-  width: 100vw;
+  padding: 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding-top: 30px;
   gap: 10px;
   margin: auto;
 }
 
 @media (max-width: 900px) {
   .image-card {
-    position: relative;
-
-    display: grid;
     grid-template-columns: repeat(1, 50vw);
     gap: 500px;
-    margin: auto;
+    left: -8%;
   }
   .base-image {
     width: 304px;
@@ -147,14 +143,18 @@ body {
     text-align: center;
   }
   .header {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, 50vw);
+    align-self: stretch;
+    place-items: center;
+    text-align: center;
   }
 
   .title {
+    padding: 10px;
     font-family: "Barlow Condensed";
     font-size: 36px;
     text-transform: uppercase;
-    align-items: center;
   }
 
   .link {
